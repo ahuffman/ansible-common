@@ -1,0 +1,9 @@
+---
+ - hosts: linux
+   tasks:
+     - name: Set Root Password
+       user:
+         name: "{{ pw_usr_name }}"
+         #to generate the encrypted password string run this command and copy the output:
+         #openssl passwd -salt `openssl rand -base64 6` -1 '<my_desired_root_password>'
+         password: "{{ pw_hash_pass }}"
