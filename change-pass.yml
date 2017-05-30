@@ -4,7 +4,7 @@
      pw_usr_name: ''
      pw_hash_pass: ''
    tasks:
-     - name: Set Root Password
+     - name: Set User's Password
        user:
          name: "{{ pw_usr_name }}"
          #to generate the encrypted password string run this command and copy the output:
